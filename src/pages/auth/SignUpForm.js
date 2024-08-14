@@ -1,19 +1,33 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import { Form, Button, Image, Col, Row, Container, Alert } from "react-bootstrap";
-import axios from "axios";
+
 import styles from "../../styles/SignInUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 
+import {
+  Form,
+  Button,
+  Image,
+  Col,
+  Row,
+  Container,
+  Alert,
+} from "react-bootstrap";
+import axios from "axios";
+import { useRedirect } from "../../hooks/useRedirect";
+
 const SignUpForm = () => {
+  useRedirect("loggedIn");
   const [signUpData, setSignUpData] = useState({
     username: "",
     password1: "",
     password2: "",
   });
   const { username, password1, password2 } = signUpData;
+
   const [errors, setErrors] = useState({});
+
   const history = useHistory();
 
   const handleChange = (event) => {
@@ -25,28 +39,10 @@ const SignUpForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
-    // Reset errors
-    setErrors({});
-
-    // Check for empty fields
-    const newErrors = {};
-    if (!username) newErrors.username = ["Username cannot be blank."];
-    if (!password1) newErrors.password1 = ["Password cannot be blank."];
-    if (!password2) newErrors.password2 = ["Confirm Password cannot be blank."];
-    if (password1 !== password2) newErrors.password2 = ["Passwords do not match."];
-
-    if (Object.keys(newErrors).length > 0) {
-      setErrors(newErrors);
-      return;
-    }
-
     try {
-      const { data } = await axios.post("/dj-rest-auth/registration/", signUpData);
-      console.log("User data after sign up:", data);
+      await axios.post("/dj-rest-auth/registration/", signUpData);
       history.push("/signin");
     } catch (err) {
-      console.log("Error during sign up:", err.response?.data);
       setErrors(err.response?.data);
     }
   };
@@ -55,10 +51,11 @@ const SignUpForm = () => {
     <Row className={styles.Row}>
       <Col className="my-auto py-2 p-md-2" md={6}>
         <Container className={`${appStyles.Content} p-4 `}>
-          <h1 className={styles.Header}>Sign Up</h1>
+          <h1 className={styles.Header}>sign up</h1>
+
           <Form onSubmit={handleSubmit}>
             <Form.Group controlId="username">
-              <Form.Label className="d-none">Username</Form.Label>
+              <Form.Label className="d-none">username</Form.Label>
               <Form.Control
                 className={styles.Input}
                 type="text"
@@ -69,7 +66,7 @@ const SignUpForm = () => {
               />
             </Form.Group>
             {errors.username?.map((message, idx) => (
-              <Alert variant="warning" key={idx} className="custom-alert">
+              <Alert variant="warning" key={idx}>
                 {message}
               </Alert>
             ))}
@@ -86,24 +83,24 @@ const SignUpForm = () => {
               />
             </Form.Group>
             {errors.password1?.map((message, idx) => (
-              <Alert key={idx} variant="warning" className="custom-alert">
+              <Alert key={idx} variant="warning">
                 {message}
               </Alert>
             ))}
 
             <Form.Group controlId="password2">
-              <Form.Label className="d-none">Confirm Password</Form.Label>
+              <Form.Label className="d-none">Confirm password</Form.Label>
               <Form.Control
                 className={styles.Input}
                 type="password"
-                placeholder="Confirm Password"
+                placeholder="Confirm password"
                 name="password2"
                 value={password2}
                 onChange={handleChange}
               />
             </Form.Group>
             {errors.password2?.map((message, idx) => (
-              <Alert key={idx} variant="warning" className="custom-alert">
+              <Alert key={idx} variant="warning">
                 {message}
               </Alert>
             ))}
@@ -115,7 +112,7 @@ const SignUpForm = () => {
               Sign up
             </Button>
             {errors.non_field_errors?.map((message, idx) => (
-              <Alert key={idx} variant="warning" className="mt-3 custom-alert">
+              <Alert key={idx} variant="warning" className="mt-3">
                 {message}
               </Alert>
             ))}
