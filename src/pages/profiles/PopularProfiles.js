@@ -8,6 +8,11 @@ import Profile from "./Profile";
 const PopularProfiles = ({ mobile }) => {
   const { popularProfiles } = useProfileData();
 
+  // Check if popularProfiles and its results exist
+  if (!popularProfiles || !popularProfiles.results.length) {
+    return <Asset spinner />;
+  }
+
   return (
     <Container
       className={`${appStyles.Content} ${
@@ -16,7 +21,7 @@ const PopularProfiles = ({ mobile }) => {
     >
       {popularProfiles.results.length ? (
         <>
-          <p>Most followed profiles.</p>
+          <p>Most followed profiles</p>
           {mobile ? (
             <div className="d-flex justify-content-around">
               {popularProfiles.results.slice(0, 4).map((profile) => (
@@ -30,7 +35,7 @@ const PopularProfiles = ({ mobile }) => {
           )}
         </>
       ) : (
-        <Asset spinner />
+        <p>No popular profiles found.</p>
       )}
     </Container>
   );
