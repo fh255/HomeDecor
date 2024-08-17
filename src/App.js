@@ -16,9 +16,10 @@ import UsernameForm from "./pages/profiles/ProfileEditForm";
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/UsernameForm";
 
-
 // Import the ProfileDataProvider
 import { ProfileDataProvider } from "./contexts/ProfileDataContext";
+// Import the NotFound component
+import NotFound from "./components/NotFound";
 
 function App() {
   const currentUser = useCurrentUser();
@@ -64,21 +65,22 @@ function App() {
             <Route exact path="/posts/:id/edit" render={() => <PostEditForm />} />
             <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
             <Route
-  exact
-  path="/profiles/:id/edit/username"
-  render={() => <UsernameForm />}
-/>
-<Route
-  exact
-  path="/profiles/:id/edit/password"
-  render={() => <UserPasswordForm />}
-/>
-<Route
-  exact
-  path="/profiles/:id/edit"
-  render={() => <ProfileEditForm />}
-/>
-            <Route render={() => <p>Page not found!</p>} />
+              exact
+              path="/profiles/:id/edit/username"
+              render={() => <UsernameForm />}
+            />
+            <Route
+              exact
+              path="/profiles/:id/edit/password"
+              render={() => <UserPasswordForm />}
+            />
+            <Route
+              exact
+              path="/profiles/:id/edit"
+              render={() => <ProfileEditForm />}
+            />
+            {/* Replace the placeholder paragraph with the NotFound component */}
+            <Route render={() => <NotFound />} />
           </Switch>
         </Container>
       </div>

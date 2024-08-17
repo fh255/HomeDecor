@@ -47,7 +47,8 @@ const UsernameForm = () => {
       }));
       history.goBack();
     } catch (err) {
-      console.log(err);
+      // Commented out the console.log that logs errors
+      // console.log(err);
       setErrors(err.response?.data);
     }
   };

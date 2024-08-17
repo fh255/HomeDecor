@@ -18,12 +18,18 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import PopularProfiles from "../profiles/PopularProfiles";
 
+// Step 1: Import the useCurrentUser hook
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
+
 function PostsPage({ message, filter = "" }) {
   const [posts, setPosts] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
 
   const [query, setQuery] = useState("");
+
+  // Step 2: Call useCurrentUser within the PostsPage component
+  const currentUser = useCurrentUser();
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -32,7 +38,8 @@ function PostsPage({ message, filter = "" }) {
         setPosts(data);
         setHasLoaded(true);
       } catch (err) {
-        console.log(err);
+        // Commented out the console.log that logs errors
+        // console.log(err);
       }
     };
 
@@ -44,7 +51,8 @@ function PostsPage({ message, filter = "" }) {
     return () => {
       clearTimeout(timer);
     };
-  }, [filter, query, pathname]);
+  // Step 3: Add currentUser to the useEffect dependency array
+  }, [filter, query, pathname, currentUser]);
 
   return (
     <Row className="h-100">
