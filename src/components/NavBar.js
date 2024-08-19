@@ -27,7 +27,7 @@ const NavBar = () => {
       setCurrentUser(null);
       removeTokenTimestamp();
     } catch (err) {
-      // Commenting out the console.log that logs errors
+      // Commented out the console.log that logs errors
       // console.log(err);
     }
   };
@@ -41,6 +41,7 @@ const NavBar = () => {
       <i className="far fa-plus-square"></i>Add post
     </NavLink>
   );
+  
   const loggedInIcons = (
     <>
       <NavLink
@@ -64,10 +65,12 @@ const NavBar = () => {
         className={styles.NavLink}
         to={`/profiles/${currentUser?.profile_id}`}
       >
-        <Avatar src={currentUser?.profile_image} text="Profile" height={40} />
+        <Avatar src={currentUser?.profile_image} height={40} />
+        <span className={styles.Username}>{currentUser?.username}</span> {/* Display username */}
       </NavLink>
     </>
   );
+
   const loggedOutIcons = (
     <>
       <NavLink

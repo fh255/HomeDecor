@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { MentionsInput, Mention } from 'react-mentions';
-import './styles.css'; // Add your custom styles here if needed
+ 
 
 const users = [
   { id: '1', display: 'John Doe' },
@@ -17,7 +17,7 @@ const HomeDecorBlog = () => {
       <MentionsInput
         value={value}
         onChange={(e) => setValue(e.target.value)}
-        placeholder="Mention @someone in your comment..."
+        // placeholder="Mention @someone in your comment..."
         style={{
           control: {
             fontSize: 16,

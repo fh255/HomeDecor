@@ -8,7 +8,7 @@ import Profile from "./Profile";
 const PopularProfiles = ({ mobile }) => {
   const { popularProfiles } = useProfileData();
 
-  // Check if popularProfiles and its results exist
+  
   if (!popularProfiles || !popularProfiles.results.length) {
     return <Asset spinner />;
   }
