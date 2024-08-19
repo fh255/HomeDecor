@@ -15,6 +15,7 @@ import ProfilePage from "./pages/profiles/ProfilePage";
 import UsernameForm from "./pages/profiles/ProfileEditForm";
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/UsernameForm";
+import ProfileImageForm from "./pages/profiles/ProfileImageForm"
 
 // Import the ProfileDataProvider
 import { ProfileDataProvider } from "./contexts/ProfileDataContext";
@@ -68,6 +69,11 @@ function App() {
               exact
               path="/profiles/:id/edit/username"
               render={() => <UsernameForm />}
+            />
+            <Route
+              exact
+              path="/profiles/:id/edit/image"
+              render={() => <ProfileImageForm />}
             />
             <Route
               exact
