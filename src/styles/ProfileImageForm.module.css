@@ -1,0 +1,21 @@
+/* Center content vertically and horizontally */
+.centerContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Container for buttons */
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Ensure the buttons are centered */
+.buttonContainer .btn {
+  width: 100%; /* Optional: make buttons full-width */
+  margin-bottom: 10px; /* Space between buttons */
+}
