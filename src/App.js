@@ -15,12 +15,10 @@ import ProfilePage from "./pages/profiles/ProfilePage";
 import UsernameForm from "./pages/profiles/ProfileEditForm";
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/UsernameForm";
-import ProfileImageForm from "./pages/profiles/ProfileImageForm"
-
-// Import the ProfileDataProvider
+import ProfileImageForm from "./pages/profiles/ProfileImageForm";
 import { ProfileDataProvider } from "./contexts/ProfileDataContext";
-// Import the NotFound component
-import NotFound from "./components/NotFound";
+import NotFound404 from "./components/NotFound404"; 
+import About from "./pages/about/About"; 
 
 function App() {
   const currentUser = useCurrentUser();
@@ -85,8 +83,8 @@ function App() {
               path="/profiles/:id/edit"
               render={() => <ProfileEditForm />}
             />
-            {/* Replace the placeholder paragraph with the NotFound component */}
-            <Route render={() => <NotFound />} />
+            <Route exact path="/about" render={() => <About />} />
+            <Route render={() => <NotFound404 />} /> {/* The 404 page for unmatched routes */}
           </Switch>
         </Container>
       </div>

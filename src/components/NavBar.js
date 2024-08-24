@@ -2,7 +2,6 @@ import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
-
 import logo from "../assets/logo.png";
 import styles from "../styles/NavBar.module.css";
 import { NavLink } from "react-router-dom";
@@ -27,7 +26,6 @@ const NavBar = () => {
       setCurrentUser(null);
       removeTokenTimestamp();
     } catch (err) {
-      // Commented out the console.log that logs errors
       // console.log(err);
     }
   };
@@ -41,7 +39,7 @@ const NavBar = () => {
       <i className="far fa-plus-square"></i>Add post
     </NavLink>
   );
-  
+
   const loggedInIcons = (
     <>
       <NavLink
@@ -66,13 +64,20 @@ const NavBar = () => {
         to={`/profiles/${currentUser?.profile_id}`}
       >
         <Avatar src={currentUser?.profile_image} height={40} />
-        <span className={styles.Username}>{currentUser?.username}</span> {/* Display username */}
+        <span className={styles.Username}>{currentUser?.username}</span>
       </NavLink>
     </>
   );
 
   const loggedOutIcons = (
     <>
+      <NavLink
+        className={styles.NavLink}
+        activeClassName={styles.Active}
+        to="/about"
+      >
+        <i className="fas fa-info-circle"></i>About Us
+      </NavLink>
       <NavLink
         className={styles.NavLink}
         activeClassName={styles.Active}
