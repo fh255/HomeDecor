@@ -30,6 +30,8 @@ Check out the live version of the project.
  * [Deployment](#deployment)
  * [Credits](#credits)
 
+[Back to top](#contents)
+
 ## Project Concepts
 ### Project Goals
 <p> The primary goal of the Home Decor website is to create a platform where users can explore and share creative ideas for decorating their homes, gardens, terraces, and balconies. The website serves as a community-driven hub where decor enthusiasts can find inspiration, discover the latest trends, and connect with others who share their passion for stylish and functional living spaces. </p>
@@ -127,6 +129,8 @@ Check out the live version of the project.
 
 - **Session Persistence:**  
   As a user, I want my session to remain active without needing to constantly log back in, so that my user experience remains smooth and uninterrupted until I choose to log out.
+  
+[Back to top](#contents)
 
 ## Design
 
@@ -174,9 +178,12 @@ The Home Decor website features a clean and modern color palette designed for si
 - **Interactive States:**
   - Link hover changes to Blue (`#2142b2`).
   - Search icon hover changes to Light Gray (`#cfced3`)
- 
+
+ [Back to top](#contents)
+
 ## Features
 
+[Back to top](#contents)
 
 
 ## Reusable Components
@@ -203,6 +210,8 @@ The following components have been implemented and reused throughout the project
 
 - **`NotFound404.js`:** Displays an error image and message if an invalid URL is accessed. The user is automatically redirected to the Home page after a few seconds.
 
+[Back to top](#contents)
+
 ## Technologies
 
 ### Languages Used
@@ -221,8 +230,6 @@ The following components have been implemented and reused throughout the project
 
 [Back to top](#contents)
 
----
-
 ## Frameworks and Libraries
 
 ### API Backend
@@ -236,7 +243,7 @@ The following components have been implemented and reused throughout the project
 - corsheaders
 - JSON Web Tokens
 
-[Back to top](#)
+[Back to top](#contents)
 
 ### Frontend
 - React JS
@@ -249,9 +256,7 @@ The following components have been implemented and reused throughout the project
 - Favicon.io
 - Google Fonts
 
-[Back to top](#)
-
----
+[Back to top](#contents)
 
 ## Installed Libraries, and Components
 - **Axios:** A promise-based HTTP client for JavaScript. It is used for making HTTP requests from the browser and handling the transformation of request and response data.
@@ -269,14 +274,15 @@ The following components have been implemented and reused throughout the project
 - **Google Developer Tools:** Used to troubleshoot, test features, and solve issues with responsiveness and styling.
 - **TinyPNG:** Used to compress images and optimize performance.
 
-[Back to top](#)
-
+[Back to top](#contents)
 
 ## Testing
 
+[Back to top](#contents)
 
 ## Deployment
 
+[Back to top](#contents)
 
 ## Credits
 
