@@ -9,3 +9,24 @@ Check out the live version of the project.
  * [Back-End Repository](https://github.com/fh255/HomeDecor-API)
 
 ## Contents
+ * Project Concepts
+    - Project Goals (#project-goals)
+    - User Stories
+    - Design
+
+### Project Goals
+<p> The primary goal of the Home Decor website is to create a platform where users can explore and share creative ideas for decorating their homes, gardens, terraces, and balconies. The website serves as a community-driven hub where decor enthusiasts can find inspiration, discover the latest trends, and connect with others who share their passion for stylish and functional living spaces. </p>
+
+### User Stories
+#### Authentication
+- **Sign Up:**  
+  As a user, I can create an account, enabling me to access exclusive features available only to registered users.
+
+- **Sign In:**  
+  As a user, I can log in to my account, allowing me to access features restricted to logged-in users.
+
+- **Sign Out:**  
+  As a user, I can log out of my account, ensuring my account remains secure and inaccessible to others.
+
+- **Token Refresh:**  
+  As a user, I can stay logged in for up to 24 hours, allowing for seamless interaction with the app throughout the day without needing to repeatedly sign in.
