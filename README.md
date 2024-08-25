@@ -19,7 +19,7 @@ Check out the live version of the project.
  * [Frameworks and Libraries](#frameworks-and-librarie)
    - [API Backend](#api-backend)
    - [Frontend](#frontend)
- * [Installed Libraries and Components](#installed-libraries-and-components)
+   - [Installed Libraries and Components](#installed-libraries-and-components)
  * [Features](#features)
  * [Reusable Components](#reusable-components)
  * [Technologies](#technologies)
@@ -256,7 +256,7 @@ The following components have been implemented and reused throughout the project
 
 [Back to top](#home-Decor)
 
-## Installed Libraries, and Components
+### Installed Libraries, and Components
 - **[Axios](https://axios-http.com/):** A promise-based HTTP client for JavaScript. It is used for making HTTP requests from the browser and handling the transformation of request and response data.
 - **[react-router-dom](https://www.npmjs.com/package/react-router-dom):** Enables dynamic routing in a web app.
 - **[Google Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/):** An open-source tool for running technical website audits.
