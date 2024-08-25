@@ -215,18 +215,18 @@ The following components have been implemented and reused throughout the project
 ## Technologies
 
 ### Languages Used
-- Python
-- HTML
-- CSS
-- JavaScript
+- [Python](https://www.python.org/)
+- [HTML](https://www.w3schools.com/html/html_intro.asp)
+- [CSS](https://www.w3schools.com/css/default.asp)
+- [JavaScript](https://react.dev/)
 
 ### Databases
-- **PostgreSQL:** Used for managing and storing relational data.
+- **[PostgreSQL](https://www.postgresql.org/):** Used for managing and storing relational data.
 
 ### Cloud Storage and Deployment Services
-- **Cloudinary:** Used to store media files and images.
-- **Heroku:** Used for the final deployment and hosting of the application.
-- **ElephantSQL:** Used to host and operate the PostgreSQL database.
+- **[Cloudinary](https://www.postgresql.org/):** Used to store media files and images.
+- **[Heroku](https://dashboard.heroku.com/apps):** Used for the final deployment and hosting of the application.
+- **[ElephantSQL](https://elephantsql.com/):** Used to host and operate the PostgreSQL database.
 
 [Back to top](#contents)
 
@@ -282,7 +282,7 @@ The following components have been implemented and reused throughout the project
 
 ## Deployment
 
-[Back to top](#contents)
+[Back to top](#home-Decor)
 
 ## Credits
 
