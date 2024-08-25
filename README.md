@@ -30,7 +30,7 @@ Check out the live version of the project.
  * [Deployment](#deployment)
  * [Credits](#credits)
 
-[Back to top](#contents)
+[Back to top](#home-Decor)
 
 ## Project Concepts
 ### Project Goals
@@ -130,7 +130,7 @@ Check out the live version of the project.
 - **Session Persistence:**  
   As a user, I want my session to remain active without needing to constantly log back in, so that my user experience remains smooth and uninterrupted until I choose to log out.
   
-[Back to top](#contents)
+[Back to top](#home-Decor)
 
 ## Design
 
@@ -179,11 +179,11 @@ The Home Decor website features a clean and modern color palette designed for si
   - Link hover changes to Blue (`#2142b2`).
   - Search icon hover changes to Light Gray (`#cfced3`)
 
- [Back to top](#contents)
+ [Back to top](#home-Decor)
 
 ## Features
 
-[Back to top](#contents)
+[Back to top](#home-Decor)
 
 
 ## Reusable Components
@@ -210,7 +210,7 @@ The following components have been implemented and reused throughout the project
 
 - **`NotFound404.js`:** Displays an error image and message if an invalid URL is accessed. The user is automatically redirected to the Home page after a few seconds.
 
-[Back to top](#contents)
+[Back to top](#home-Decor)
 
 ## Technologies
 
@@ -228,57 +228,50 @@ The following components have been implemented and reused throughout the project
 - **[Heroku](https://dashboard.heroku.com/apps):** Used for the final deployment and hosting of the application.
 - **[ElephantSQL](https://elephantsql.com/):** Used to host and operate the PostgreSQL database.
 
-[Back to top](#contents)
+[Back to top](#home-Decor)
 
 ## Frameworks and Libraries
 
 ### API Backend
-- Django Rest Framework
-- Psycopg2
-- django_filters
-- dj_rest_auth
-- rest_framework.authtoken
-- dj_rest_auth.registration
-- allauth
-- corsheaders
-- JSON Web Tokens
+- [Django Rest Framework](https://www.django-rest-framework.org/)
+- [Psycopg2](https://pypi.org/project/psycopg2/)
+- [django_filters](https://django-filter.readthedocs.io/en/stable/guide/install.html)
+- [dj_rest_auth](https://dj-rest-auth.readthedocs.io/en/latest/installation.html)
+- [rest_framework.authtoken](https://pypi.org/project/django-rest-authtoken/)
+- [dj_rest_auth.registration](https://dj-rest-auth.readthedocs.io/en/latest/installation.html)
+- [allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)
+- [corsheaders](https://pypi.org/project/django-cors-headers/)
+- [JSON Web Tokens](https://django-rest-framework-simplejwt.readthedocs.io/en/latest/getting_started.html)
 
-[Back to top](#contents)
+[Back to top](#home-Decor)
 
 ### Frontend
-- React JS
-- JSON Web Tokens
-- React Bootstrap
-- react-simple-star-rating
-- React Router
-- Font Awesome
-- Canva
-- Favicon.io
-- Google Fonts
+- [React JS](https://react.dev/)
+- [JSON Web Tokens](https://jwt.io/)
+- [React Bootstrap](https://react-bootstrap-v4.netlify.app/)
+- [React Router](https://v5.reactrouter.com/web/guides/quick-start)
+- [Font Awesome](https://fontawesome.com/)
+- [Favicon.io](https://favicon.io/favicon-converter/)
+- [Google Fonts](https://fonts.google.com/)
 
-[Back to top](#contents)
+[Back to top](#home-Decor)
 
 ## Installed Libraries, and Components
-- **Axios:** A promise-based HTTP client for JavaScript. It is used for making HTTP requests from the browser and handling the transformation of request and response data.
-- **jwt-decode:** Used to securely transmit information between parties as JSON objects following the open standard (RFC 7519).
-- **react-router-dom:** Enables dynamic routing in a web app.
-- **react-infinite-scroll-component:** Implements infinite scrolling, where more content is automatically loaded as the user scrolls down.
-- **'Notification Container' Component:** Provides real-time feedback and notifications to users when changes are made to data or content.
-- **Google Lighthouse:** An open-source tool for running technical website audits.
-- **Am I Responsive?:** Used to ensure the project looks good across all devices.
-- **HTML Markup Validation:** Used to validate HTML code syntax.
-- **CSS Validation Service:** Used to validate CSS code syntax.
-- **Balsamiq:** Used to create mockups and wireframes during the planning phase of the project.
-- **Google Fonts:** Provides free and open-source font families for web and computer use.
-- **GitHub:** An internet hosting service for software development and version control using Git.
-- **Google Developer Tools:** Used to troubleshoot, test features, and solve issues with responsiveness and styling.
-- **TinyPNG:** Used to compress images and optimize performance.
+- **[Axios](https://axios-http.com/):** A promise-based HTTP client for JavaScript. It is used for making HTTP requests from the browser and handling the transformation of request and response data.
+- **[react-router-dom](https://www.npmjs.com/package/react-router-dom):** Enables dynamic routing in a web app.
+- **[Google Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/):** An open-source tool for running technical website audits.
+- **[Am I Responsive?](https://ui.dev/amiresponsive):** Used to ensure the project looks good across all devices.
+- **[HTML Markup Validation](https://validator.w3.org/):** Used to validate HTML code syntax.
+- **[CSS Validation Service](https://jigsaw.w3.org/css-validator/):** Used to validate CSS code syntax.
+- **[Google Fonts](https://fonts.google.com/):** Provides free and open-source font families for web and computer use.
+- **[GitHub](https://github.com/):** An internet hosting service for software development and version control using Git.
+- **[Google Developer Tools](https://developers.google.com/web/tools/chrome-devtools):** Used to troubleshoot, test features, and solve issues with responsiveness and styling.
 
-[Back to top](#contents)
+[Back to top](#home-Decor)
 
 ## Testing
 
-[Back to top](#contents)
+[Back to top](#home-Decor)
 
 ## Deployment
 
