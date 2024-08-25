@@ -9,14 +9,28 @@ Check out the live version of the project.
  * [Back-End Repository](https://github.com/fh255/HomeDecor-API)
 
 ## Contents
- * Project Concepts
+ * [Project Concepts](#project-concepts)
     - [Project Goals](#project-goals)
     - [User Stories](#user-stories)
-    - [Design](Design)
-        - [Images](images)
-        - [Typography](typography)
-        - [Colour Scheme](colour-scheme)
+    - [Design](#design)
+        - [Images](#images)
+        - [Typography](#typography)
+        - [Colour Scheme](#colour-scheme)
+ * [Frameworks and Libraries](#frameworks-and-librarie)
+   - [API Backend](#api-backend)
+   - [Frontend](#frontend)
+ * [Installed Libraries and Components](#installed-libraries-and-components)
+ * [Features](#features)
+ * [Reusable Components](#reusable-components)
+ * [Technologies](#technologies)
+   - [Languages Used](#languages-used)
+   - [Databases](#databases)
+   - [Cloud Storage and Deployment Services](#cloud-storage-and-deployment-services)
+ * [Testing](#testing)
+ * [Deployment](#deployment)
+ * [Credits](#credits)
 
+## Project Concepts
 ### Project Goals
 <p> The primary goal of the Home Decor website is to create a platform where users can explore and share creative ideas for decorating their homes, gardens, terraces, and balconies. The website serves as a community-driven hub where decor enthusiasts can find inspiration, discover the latest trends, and connect with others who share their passion for stylish and functional living spaces. </p>
 
@@ -160,6 +174,114 @@ The Home Decor website features a clean and modern color palette designed for si
 - **Interactive States:**
   - Link hover changes to Blue (`#2142b2`).
   - Search icon hover changes to Light Gray (`#cfced3`)
+ 
+## Features
+
+
+
+## Reusable Components
+
+The following components have been implemented and reused throughout the project:
+
+- **`axiosDefaults.js`:** Handles HTTP requests to the backend API, including CRUD actions and GET requests for specific objects or lists of objects.
+
+- **`Asset.js`:** Exports the loading spinner component, used when loading content across the site.
+
+- **`Avatar.js`:** Manages and exports the user avatar images displayed in the viral profiles list, profile pages, and the navbar profile link.
+
+- **`MoreDropdown.js`:** Displays a dropdown menu with options to edit or delete memes, comments, and profile details, accessible only to authorized users.
+
+- **`CurrentUserContext.js`:** Confirms the logged-in status of the user to determine which functionalities are available based on their access level.
+
+- **`ProfileDataContext.js`:** Provides follow and unfollow capabilities to authorized users through the `PopularProfiles` component and the `ProfilePage` component.
+
+- **`useRedirect.js`:** Redirects users to another page if they are not authorized to access the page they’re trying to view.
+
+- **`useClickOutsideToggle.js`:** Implemented for the mobile dropdown navigation, allowing users to close the expanded navbar by tapping or clicking outside of it.
+
+- **`utils.js`:** Supplies functionality to components that utilize infinite scrolling.
+
+- **`NotFound404.js`:** Displays an error image and message if an invalid URL is accessed. The user is automatically redirected to the Home page after a few seconds.
+
+## Technologies
+
+### Languages Used
+- Python
+- HTML
+- CSS
+- JavaScript
+
+### Databases
+- **PostgreSQL:** Used for managing and storing relational data.
+
+### Cloud Storage and Deployment Services
+- **Cloudinary:** Used to store media files and images.
+- **Heroku:** Used for the final deployment and hosting of the application.
+- **ElephantSQL:** Used to host and operate the PostgreSQL database.
+
+[Back to top](#contents)
+
+---
+
+## Frameworks and Libraries
+
+### API Backend
+- Django Rest Framework
+- Psycopg2
+- django_filters
+- dj_rest_auth
+- rest_framework.authtoken
+- dj_rest_auth.registration
+- allauth
+- corsheaders
+- JSON Web Tokens
+
+[Back to top](#)
+
+### Frontend
+- React JS
+- JSON Web Tokens
+- React Bootstrap
+- react-simple-star-rating
+- React Router
+- Font Awesome
+- Canva
+- Favicon.io
+- Google Fonts
+
+[Back to top](#)
+
+---
+
+## Installed Libraries, and Components
+- **Axios:** A promise-based HTTP client for JavaScript. It is used for making HTTP requests from the browser and handling the transformation of request and response data.
+- **jwt-decode:** Used to securely transmit information between parties as JSON objects following the open standard (RFC 7519).
+- **react-router-dom:** Enables dynamic routing in a web app.
+- **react-infinite-scroll-component:** Implements infinite scrolling, where more content is automatically loaded as the user scrolls down.
+- **'Notification Container' Component:** Provides real-time feedback and notifications to users when changes are made to data or content.
+- **Google Lighthouse:** An open-source tool for running technical website audits.
+- **Am I Responsive?:** Used to ensure the project looks good across all devices.
+- **HTML Markup Validation:** Used to validate HTML code syntax.
+- **CSS Validation Service:** Used to validate CSS code syntax.
+- **Balsamiq:** Used to create mockups and wireframes during the planning phase of the project.
+- **Google Fonts:** Provides free and open-source font families for web and computer use.
+- **GitHub:** An internet hosting service for software development and version control using Git.
+- **Google Developer Tools:** Used to troubleshoot, test features, and solve issues with responsiveness and styling.
+- **TinyPNG:** Used to compress images and optimize performance.
+
+[Back to top](#)
+
+
+## Testing
+
+
+## Deployment
+
+
+## Credits
+
+
+
 
 
 
