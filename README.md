@@ -129,6 +129,14 @@ Check out the live version of the project.
 
 - **Session Persistence:**  
   As a user, I want my session to remain active without needing to constantly log back in, so that my user experience remains smooth and uninterrupted until I choose to log out.
+
+### Real Time Notifications
+ - **Authentication Notificatios**
+    - As a user, I want to receive a notification after signing up, sign-in and sign out, so that I know my account creation was successful.
+ - **Post Create, Edit, and Delete Notifications**
+    - As a user, I want to receive notifications when I create, edit, or delete a post, so that I am informed of the success or failure of these actions.
+
+[View Full User Story here](https://github.com/users/fh255/projects/10/views/1)
   
 [Back to top](#home-Decor)
 
