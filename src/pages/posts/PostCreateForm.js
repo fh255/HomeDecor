@@ -1,3 +1,4 @@
+// src/pages/posts/PostCreateForm.js
 import React, { useRef, useState } from "react";
 
 import Form from "react-bootstrap/Form";
@@ -19,6 +20,7 @@ import btnStyles from "../../styles/Button.module.css";
 import { useHistory } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 import { useRedirect } from "../../hooks/useRedirect";
+import { useNotification } from "../../contexts/NotificationContext"; // Import notification context
 
 function PostCreateForm() {
   useRedirect("loggedOut");
@@ -33,6 +35,7 @@ function PostCreateForm() {
 
   const imageInput = useRef(null);
   const history = useHistory();
+  const { setNotification } = useNotification(); // Use notification context
 
   const handleChange = (event) => {
     setPostData({
@@ -61,10 +64,9 @@ function PostCreateForm() {
 
     try {
       const { data } = await axiosReq.post("/posts/", formData);
+      setNotification("Post created successfully!"); // Trigger the notification
       history.push(`/posts/${data.id}`);
     } catch (err) {
-      // Commented out the console.log that logs errors
-      // console.log(err);
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
       }

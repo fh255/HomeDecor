@@ -1,34 +1,29 @@
 import React, { useEffect, useState } from "react";
-
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
+import InfiniteScroll from "react-infinite-scroll-component";
 
 import Post from "./Post";
-import Asset from "../../components/Asset";
+import PopularProfiles from "../profiles/PopularProfiles";
 
 import appStyles from "../../App.module.css";
 import styles from "../../styles/PostsPage.module.css";
 import { useLocation } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
+import { fetchMoreData } from "../../utils/utils";
 
 import NoResults from "../../assets/404.png";
-import InfiniteScroll from "react-infinite-scroll-component";
-import { fetchMoreData } from "../../utils/utils";
-import PopularProfiles from "../profiles/PopularProfiles";
-
-// Step 1: Import the useCurrentUser hook
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
 function PostsPage({ message, filter = "" }) {
   const [posts, setPosts] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
-  const { pathname } = useLocation();
-
   const [query, setQuery] = useState("");
+  const [error, setError] = useState(false);
 
-  // Step 2: Call useCurrentUser within the PostsPage component
+  const { pathname } = useLocation();
   const currentUser = useCurrentUser();
 
   useEffect(() => {
@@ -37,9 +32,10 @@ function PostsPage({ message, filter = "" }) {
         const { data } = await axiosReq.get(`/posts/?${filter}search=${query}`);
         setPosts(data);
         setHasLoaded(true);
+        setError(false);
       } catch (err) {
-        // Commented out the console.log that logs errors
-        // console.log(err);
+        setError(true);
+        setHasLoaded(true);
       }
     };
 
@@ -51,7 +47,6 @@ function PostsPage({ message, filter = "" }) {
     return () => {
       clearTimeout(timer);
     };
-  // Step 3: Add currentUser to the useEffect dependency array
   }, [filter, query, pathname, currentUser]);
 
   return (
@@ -74,25 +69,35 @@ function PostsPage({ message, filter = "" }) {
 
         {hasLoaded ? (
           <>
-            {posts.results.length ? (
+            {error ? (
+              <Container className={appStyles.Content}>
+                <div className={styles.ImageContainer}>
+                  <img src={NoResults} alt="No Results" className={styles.NoResultsImage} />
+                  <p>{message || "Something went wrong. Please try again later."}</p>
+                </div>
+              </Container>
+            ) : posts.results.length ? (
               <InfiniteScroll
                 children={posts.results.map((post) => (
                   <Post key={post.id} {...post} setPosts={setPosts} />
                 ))}
                 dataLength={posts.results.length}
-                loader={<Asset spinner />}
+                loader={<div className={styles.Spinner} />}
                 hasMore={!!posts.next}
                 next={() => fetchMoreData(posts, setPosts)}
               />
             ) : (
               <Container className={appStyles.Content}>
-                <Asset src={NoResults} message={message} />
+                <div className={styles.ImageContainer}>
+                  <img src={NoResults} alt="No Results" className={styles.NoResultsImage} />
+                  <p>{message}</p>
+                </div>
               </Container>
             )}
           </>
         ) : (
           <Container className={appStyles.Content}>
-            <Asset spinner />
+            <div className={styles.Spinner} />
           </Container>
         )}
       </Col>

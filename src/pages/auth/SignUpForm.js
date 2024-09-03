@@ -14,11 +14,13 @@ import Alert from "react-bootstrap/Alert";
 
 import axios from "axios";
 import { useRedirect } from "../../hooks/useRedirect";
+import { useNotification } from "../../contexts/NotificationContext"; // Import notification context
 
 import signUpImage from "../../assets/SignUp.png";
 
 const SignUpForm = () => {
   useRedirect("loggedIn");
+  const { setNotification } = useNotification(); // Use notification context
   const [signUpData, setSignUpData] = useState({
     username: "",
     password1: "",
@@ -41,6 +43,7 @@ const SignUpForm = () => {
     event.preventDefault();
     try {
       await axios.post("/dj-rest-auth/registration/", signUpData);
+      setNotification("Account created successfully! Please sign in."); // Set notification on signup
       history.push("/signin");
     } catch (err) {
       setErrors(err.response?.data);
@@ -129,10 +132,7 @@ const SignUpForm = () => {
         md={6}
         className={`my-auto d-none d-md-block p-2 ${styles.SignUpCol}`}
       >
-        <Image
-          className={`${appStyles.FillerImage}`}
-          src={signUpImage}
-        />
+        <Image className={`${appStyles.FillerImage}`} src={signUpImage} />
       </Col>
     </Row>
   );

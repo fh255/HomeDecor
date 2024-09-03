@@ -10,6 +10,7 @@ import { Link, useHistory } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 import { MoreDropdown } from "../../components/MoreDropdown";
+import { useNotification } from "../../contexts/NotificationContext"; // Import notification context
 
 const Post = (props) => {
   const {
@@ -31,6 +32,7 @@ const Post = (props) => {
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
   const history = useHistory();
+  const { setNotification } = useNotification(); // Use notification context
 
   const handleEdit = () => {
     history.push(`/posts/${id}/edit`);
@@ -39,9 +41,9 @@ const Post = (props) => {
   const handleDelete = async () => {
     try {
       await axiosRes.delete(`/posts/${id}/`);
+      setNotification("Post deleted successfully!"); // Trigger the notification
       history.goBack();
     } catch (err) {
-      // Commented out the console.log that logs errors
       // console.log(err);
     }
   };
@@ -58,7 +60,6 @@ const Post = (props) => {
         }),
       }));
     } catch (err) {
-      // Commented out the console.log that logs errors
       // console.log(err);
     }
   };
@@ -75,7 +76,6 @@ const Post = (props) => {
         }),
       }));
     } catch (err) {
-      // Commented out the console.log that logs errors
       // console.log(err);
     }
   };

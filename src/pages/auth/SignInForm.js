@@ -14,12 +14,14 @@ import appStyles from "../../App.module.css";
 import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
 import { useRedirect } from "../../hooks/useRedirect";
 import { setTokenTimestamp } from "../../utils/utils";
+import { useNotification } from "../../contexts/NotificationContext"; // Import notification context
 
-import signInImage from "../../assets/SignIn.png"; 
+import signInImage from "../../assets/SignIn.png";
 
 function SignInForm() {
   const setCurrentUser = useSetCurrentUser();
   useRedirect("loggedIn");
+  const { setNotification } = useNotification(); // Use notification context
 
   const [signInData, setSignInData] = useState({
     username: "",
@@ -30,6 +32,7 @@ function SignInForm() {
   const [errors, setErrors] = useState({});
 
   const history = useHistory();
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -37,6 +40,7 @@ function SignInForm() {
       const { data } = await axios.post("/dj-rest-auth/login/", signInData);
       setCurrentUser(data.user);
       setTokenTimestamp(data);
+      setNotification(`Welcome back, ${data.user.username}!`); // Set notification on login
       history.goBack();
     } catch (err) {
       setErrors(err.response?.data);
@@ -112,10 +116,7 @@ function SignInForm() {
         md={6}
         className={`my-auto d-none d-md-block p-2 ${styles.SignInCol}`}
       >
-        <Image
-          className={`${appStyles.FillerImage}`}
-          src={signInImage} 
-        />
+        <Image className={`${appStyles.FillerImage}`} src={signInImage} />
       </Col>
     </Row>
   );
