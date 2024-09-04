@@ -2,6 +2,8 @@
 
 <p>Home Decor is a community-driven platform where users can explore and share ideas for transforming their living spaces. Whether you’re looking to revamp your home interiors, create a cozy garden, or enhance your terrace and balcony, this is your destination for stylish, practical, and affordable decor inspiration.</p>
 
+<img width="904" alt="mock" src="https://github.com/user-attachments/assets/c88274fd-8a59-4283-a5f7-ebc597939a08">
+
 ### Live Demo
 Check out the live version of the project. 
  * [Deployed Front-End](https://home-fat-116ff084a3b1.herokuapp.com/)
