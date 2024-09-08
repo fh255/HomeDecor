@@ -23,6 +23,21 @@ Check out the live version of the project.
    - [Frontend](#frontend)
    - [Installed Libraries and Components](#installed-libraries-and-components)
  * [Features](#features)
+   - [Logo](logo)
+   - [NavBar](navbar)
+   - [Home Page](home-page)
+   - [Post Page](post-page)
+   - [About Us](about-us)
+   - [Add Post](add-post)
+   - [Feed](feed)
+   - [Profile Page](profile-page)
+   - [Sign In](sign-in)
+   - [Sign Up](sign-up)
+   - [No results found](no-results-found)
+   - [Custom 404 page](custom-404-page)
+   - [Real Time Notifications](real-time-notifications)
+   - [CRUD](crud)
+   - [Defensive Design](defensive-design)
  * [Reusable Components](#reusable-components)
  * [Technologies](#technologies)
    - [Languages Used](#languages-used)
@@ -148,7 +163,7 @@ Check out the live version of the project.
 
 The images used for the profile avatars graphic was sourced from the Code Institute Moments walkthrough.
 
-Additional images, including those used for user profiles and memes, were sourced from [Google Images](https://images.google.com/).
+Additional images, including those used for user profiles and posts, were sourced from [Google Images](https://images.google.com/).
 
 The favicons were custom-created using [Favicon.io](https://favicon.io/).
 
@@ -193,6 +208,196 @@ The Home Decor website features a clean and modern color palette designed for si
 
 ## Features
 
+### Logo
+The logo was utilized both as the webpage's favicon and as the home link in the navigation bar.
+<details>
+  <summary>Logo</summary>
+<img width="109" alt="logo" src="https://github.com/user-attachments/assets/8ab1bc03-36a3-4e2c-aa9c-160326ff447a">
+</details>
+
+### NavBar
+The user is Sign in.
+<details>
+  <summary>Signed In NavBar</summary>
+    <img width="997" alt="NB-In" src="https://github.com/user-attachments/assets/8f1cec19-e98c-4197-84d4-de13c03772e0">
+</details>
+
+The user is not Signed in
+<details>
+  <summary>Signed Out NavBar</summary>
+    <img width="978" alt="NB-Out" src="https://github.com/user-attachments/assets/6d447f12-0a29-41fe-9b2b-c1b1140bbf8c">
+</details>
+
+### Home Page
+The landing page features a sidebar highlighting the "Most Viral Profiles."
+<details>
+  <summary>Signed In Home page</summary></summary>
+    <img width="1130" alt="Home signin" src="https://github.com/user-attachments/assets/7f8753a9-cb5a-4f96-af90-45756908e773">
+</details>
+
+<details>
+  <summary>Signed Out Home page</summary></summary>
+    <img width="1187" alt="Home Signout" src="https://github.com/user-attachments/assets/5d59fdb2-5151-4732-a3c8-399fc3983a78">
+</details>
+
+### Post Page
+#### Single Post Page (When the User is Logged In)
+When a user clicks on a single post, they are directed to the post's dedicated page, which still includes the "Most Viral Profiles" sidebar. Below the post, two icons represent available actions:
+
+ - Heart Icon: Allows users to react to the post. Once clicked, the icon fills with a solid shade, indicating the reaction. Clicking it again will undo the reaction. The number next to the heart reflects the total number of reactions from users.
+ - Comment Icon: Displays the total number of comments for that post.
+Beneath the post, the comment section lists all user comments. Logged-in users can tag or mention other users directly in the comment box by typing their username.
+<details>
+  <summary>Signed In Post</summary>
+    <img width="628" alt="Post SI" src="https://github.com/user-attachments/assets/0f3781f0-e350-4b29-9360-d769709b1c0a">
+    <img width="628" alt="Post comment" src="https://github.com/user-attachments/assets/82f092dc-6f20-4b98-bb8f-004144b45468">
+</details>
+
+ - In the comment section, logged-in users have the opportunity to publish comments. After posting a comment, three vertical dots appear next to their comment. When clicked, this menu allows users to either edit or delete their own comments.
+
+<details>
+  <summary>Signed In Comment</summary>
+  <img width="627" alt="Cmnt with tag" src="https://github.com/user-attachments/assets/d009c52e-eb73-4384-8cb3-1f5c6efd6e38">
+</details>
+
+<details>
+  <summary>Signed In Comment Edit</summary>
+  <img width="629" alt="Cmnt Edit" src="https://github.com/user-attachments/assets/9d82c012-f52f-4b43-b60d-3a3769b9eedd">
+</details>
+
+<details>
+  <summary>Signed In Comment delete</summary>
+  <img width="628" alt="cmnt delete" src="https://github.com/user-attachments/assets/f479c678-65f1-462d-a745-1d39802401d5">
+</details>
+
+#### Single Post Page (When the User is Logged In and is the Owner of the Post)
+If a user is the owner of the post, three vertical dots are displayed next to the post image. When clicked, this menu gives the user the option to edit or delete their post.
+
+<details>
+  <summary>Own Post Page</summary>
+  <img width="641" alt="own post" src="https://github.com/user-attachments/assets/40a89b0e-a6a2-41b4-a1c1-82b4d91c0639">
+</details>
+
+<details>
+  <summary>Own Post Page Edit</summary>
+  <img width="954" alt="own post edit" src="https://github.com/user-attachments/assets/6f8a6b5c-fee1-4067-91f2-77b97071e2dd">
+</details>
+
+#### Single Post Page (When the User is Not Logged In)
+ - When a logged-out user hovers over the heart icon, an overlay message appears prompting them to log in to react to the post.
+ - Logged-out users are unable to leave comments or mention other users.
+
+<details>
+  <summary>Signed Out Post</summary>
+  <img width="636" alt="Post SO" src="https://github.com/user-attachments/assets/1295bf6e-3325-488d-a44f-3cd818604dc4">
+</details>
+
+### About Us
+Here, you'll find simple ideas and tips to decorate your home and make it your own. Whether it's furniture, accessories, or small touches, this page helps you create a cozy and stylish space.
+The icon and link to this page will only show in the NavBar for users who are logged out.
+
+<details>
+  <summary>About Us</summary>
+    <img width="1141" alt="About " src="https://github.com/user-attachments/assets/f1f45e11-ccd2-4b49-8e01-48973506dc8e">
+</details>
+
+### Add Post
+This is where logged-in users can upload an image for their post and fill out the Title and Content sections. After completing these, they can click the "Create" button to publish their post.
+Once the post is created, the owner has the option to edit or delete it.
+
+<details>
+  <summary>Add Post</summary>
+    <img width="1138" alt="Add Post" src="https://github.com/user-attachments/assets/0c8bee2e-6322-43a6-87a0-64c8e103c718">
+</details>
+
+### Feed
+The Feed displays posts created by users you follow. If a logged-in user isn't following anyone, a "No results found" message is shown, encouraging them to start following other users.
+
+<details>
+  <summary>Feed</summary>
+<img width="1135" alt="Feed" src="https://github.com/user-attachments/assets/c1549fa9-4748-4c2a-958b-bc78c03f77ea">
+</details>
+
+<details>
+  <summary>No Followers Feed</summary>
+<img width="989" alt="feed NF" src="https://github.com/user-attachments/assets/a5cb14f1-6cc0-43ab-9c9c-78e65fc54e9e">
+</details>
+
+### Profile Page
+The profile page displays the profile owner's avatar or image, along with stats showing the number of posts posted, the number of profiles followed, and the number of followers. There is a bio section, followed by all the posts the profile owner has posted.
+On the left-hand side, there is a section showing the most viral profiles. If the user is logged in, a "Follow/Unfollow" button appears at the top of the profile section.
+If the logged-in user is also the owner of the profile, a three-bar icon is visible in the top right corner. Clicking this icon allows the profile owner to edit their profile, change their profile image, or update their username.
+
+<details>
+  <summary>Profile</summary>
+    <img width="960" alt="Profile" src="https://github.com/user-attachments/assets/ec08b13f-7300-4b00-b6e5-c6384ddcce07">
+</details>
+
+<details>
+  <summary>Edit Profile</summary>
+    <img width="969" alt="Edit profile" src="https://github.com/user-attachments/assets/af181e66-4c9a-4a33-a494-7e8df2733829">
+</details>
+
+<details>
+  <summary>Profile's three bar icon</summary>
+    <img width="620" alt="three-bar icon" src="https://github.com/user-attachments/assets/c51c4c08-b2e9-40f4-819c-57b8455f2fb9">
+</details>
+
+### Sign In
+<details>
+  <summary>Logo</summary>
+</details>
+
+### Sign Up
+<details>
+  <summary>Logo</summary>
+</details>
+
+### No results found
+<details>
+  <summary>Logo</summary>
+</details>
+
+### Custom 404 page
+<details>
+  <summary>Logo</summary>
+</details>
+
+### Real Time Notifications
+<details>
+  <summary>Logo</summary>
+</details>
+
+### CRUD
+<details>
+  <summary>Logo</summary>
+</details>
+
+### Defensive Design
+<details>
+  <summary>Logo</summary>
+</details>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 [Back to top](#home-Decor)
 
 
@@ -206,7 +411,7 @@ The following components have been implemented and reused throughout the project
 
 - **`Avatar.js`:** Manages and exports the user avatar images displayed in the viral profiles list, profile pages, and the navbar profile link.
 
-- **`MoreDropdown.js`:** Displays a dropdown menu with options to edit or delete memes, comments, and profile details, accessible only to authorized users.
+- **`MoreDropdown.js`:** Displays a dropdown menu with options to edit or delete posts, comments, and profile details, accessible only to authorized users.
 
 - **`CurrentUserContext.js`:** Confirms the logged-in status of the user to determine which functionalities are available based on their access level.
 
