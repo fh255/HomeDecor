@@ -344,59 +344,114 @@ If the logged-in user is also the owner of the profile, a three-bar icon is visi
 </details>
 
 ### Sign In
+Sign in page with a link to sign up for an account if the user does not have an account yet.
+
 <details>
-  <summary>Logo</summary>
+  <summary>Sign In</summary>
+    <img width="1201" alt="Signin" src="https://github.com/user-attachments/assets/0e0d15cc-ed0a-44e1-9237-b6fb90e79515">
 </details>
 
 ### Sign Up
-<details>
-  <summary>Logo</summary>
-</details>
+Sign up page with a link to sign in if the user already has an account.
 
-### No results found
 <details>
-  <summary>Logo</summary>
+  <summary>Sign Up</summary>
+    <img width="1277" alt="signup" src="https://github.com/user-attachments/assets/a87eabc7-a8a6-4721-b628-a6479f7f1b6f">
 </details>
 
 ### Custom 404 page
+The 404 page lets users know they are still connected to the site but on a non-existent page.
+
 <details>
-  <summary>Logo</summary>
+  <summary>Not Found</summary>
+    <img width="572" alt="404" src="https://github.com/user-attachments/assets/06de63dd-daf9-417d-bbd5-b6ffe047192d">
 </details>
 
 ### Real Time Notifications
+Users are kept up to date in real-time with pop-up messages appearing in the top-right corner of the screen. These notifications inform users of successful updates to their content or prompt them when action is required, ensuring a smooth and interactive experience.
+
 <details>
-  <summary>Logo</summary>
+  <summary>Signed Up Notification</summary>
+    <img width="253" alt="Sign up" src="https://github.com/user-attachments/assets/5bb114ca-0249-4a74-bd03-42002c729793">
+</details>
+
+<details>
+  <summary>Signed In Notification</summary>
+    <img width="312" alt="Sign in" src="https://github.com/user-attachments/assets/57c49288-2419-4be5-9a6c-6bd9cb3d619c">
+</details>
+
+<details>
+  <summary>Signed Out Notification</summary>
+    <img width="317" alt="Signed Out Not" src="https://github.com/user-attachments/assets/12041f03-3bad-441b-a101-07e2818c9fc3">
+</details>
+
+<details>
+  <summary>Post Created Notification</summary>
+    <img width="306" alt="post create" src="https://github.com/user-attachments/assets/b44cd1ce-2405-4697-8dcf-71ae072ae10e">
+</details>
+
+<details>
+  <summary>Post Edited Notification</summary>
+    <img width="315" alt="Psot Updated" src="https://github.com/user-attachments/assets/5c7a60e3-6a0f-4565-a942-8bcb4a3d9475">
+</details>
+
+<details>
+  <summary>Post Deleted Notification</summary>
+    <img width="311" alt="POST DELETE" src="https://github.com/user-attachments/assets/54861905-43fe-44a9-a23a-0f997ed203cb">
+</details>
+
+<details>
+  <summary>Post Created Notification</summary>
+</details>
+
+<details>
+  <summary>Post Edited Notification</summary>
+</details>
+
+<details>
+  <summary>Post Deleted Notification</summary>
 </details>
 
 ### CRUD
-<details>
-  <summary>Logo</summary>
-</details>
+The CRUD functionalities implemented in this project are the following:
+ - After signing up, users can personalize their profile by adding a profile picture and bio, and they can also update their username and password on the profile page.
+ - For posts, users can edit or delete their memes. Clicking the three dots on the right of a post allows for deletion (which returns the user to the home page) or editing, which opens an edit form.
+ - Comments on memes can also be edited or deleted. When editing, users can modify the comment and either save or cancel changes.
+ - Users can react positively to post and undo these actions at any time. They can also follow or unfollow other users whenever they choose.
 
 ### Defensive Design
+
+When creating a new account, the following error message will appear if any of the inputs are left blank:
+
 <details>
-  <summary>Logo</summary>
+  <summary>Blank Input Error</summary>
+    <img width="482" alt="Blank input" src="https://github.com/user-attachments/assets/f6b7ea35-a620-4b0b-91d8-642c2c4016fb">
 </details>
 
+<details>
+  <summary>Sign Up Error</summary>
+    <img width="464" alt="Signup Error" src="https://github.com/user-attachments/assets/2f47782c-2517-4113-8063-a75a9e55bc4c">
+</details>
 
+<details>
+  <summary>Common Password Error</summary>
+    <img width="471" alt="Common Password" src="https://github.com/user-attachments/assets/5b0c5866-d486-4ab0-a1e2-8348dea80b31">
+</details>
 
+<details>
+  <summary>Existing User Error</summary>
+    <img width="468" alt="Existing User" src="https://github.com/user-attachments/assets/b3494112-c40e-4da6-a40e-2293289d33d3">
+</details>
 
-  
+<details>
+  <summary>Blank Image Error</summary>
+    <img width="897" alt="Blank image" src="https://github.com/user-attachments/assets/9c0ebc8f-6782-4aad-991a-ef0211d3676c">
+</details>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<details>
+  <summary>Blank Title Error</summary>
+    <img width="913" alt="Blank title" src="https://github.com/user-attachments/assets/48430d46-9cb2-45e0-b741-c4f7508e668a">
+</details>
 
 [Back to top](#home-Decor)
 
