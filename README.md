@@ -23,55 +23,76 @@ Check out the live version of the project.
    - [Frontend](#frontend)
    - [Installed Libraries and Components](#installed-libraries-and-components)
  * [Features](#features)
-   - [Logo](logo)
-   - [NavBar](navbar)
-   - [Home Page](home-page)
-   - [Post Page](post-page)
-   - [About Us](about-us)
-   - [Add Post](add-post)
-   - [Feed](feed)
-   - [Profile Page](profile-page)
-   - [Sign In](sign-in)
-   - [Sign Up](sign-up)
-   - [No results found](no-results-found)
-   - [Custom 404 page](custom-404-page)
-   - [Real Time Notifications](real-time-notifications)
-   - [CRUD](crud)
-   - [Defensive Design](defensive-design)
+   - [Logo](#logo)
+   - [NavBar](#navbar)
+   - [Home Page](#home-page)
+   - [Post Page](#post-page)
+   - [About Us](#about-us)
+   - [Add Post](#add-post)
+   - [Feed](#feed)
+   - [Profile Page](#profile-page)
+   - [Sign In](#sign-in)
+   - [Sign Up](#sign-up)
+   - [No results found](#no-results-found)
+   - [Custom 404 page](#custom-404-page)
+   - [Real Time Notifications](#real-time-notifications)
+   - [CRUD](#crud)
+   - [Defensive Design](#defensive-design)
  * [Reusable Components](#reusable-components)
  * [Technologies](#technologies)
    - [Languages Used](#languages-used)
    - [Databases](#databases)
    - [Cloud Storage and Deployment Services](#cloud-storage-and-deployment-services)
  * [Testing](#testing)
+   - [Introduction](#introduction)
+   - [Validator Testing](#validator-testing)
+   - [Lighthouse Testing](#lighthouse-testing)
  * [Deployment](#deployment)
+   - [Initial Deployment](#initial-deployment)
+   - [Deployment Steps](#deployment-steps)
+   - [Final Deployment](#final-deployment)
+   - [Cloning the Repository](#cloning-the-repository)
+   - [Forking the Repository](#forking-the-repository)
  * [Credits](#credits)
+   - [Code Institute](#code-institute)
+   - [Sources](#sources)
+   - [Media](#media)
+   - [Acknowledgements](#acknowledgements)
 
 [Back to top](#home-Decor)
 
 ## Project Concepts
+
 ### Project Goals
 <p> The primary goal of the Home Decor website is to create a platform where users can explore and share creative ideas for decorating their homes, gardens, terraces, and balconies. The website serves as a community-driven hub where decor enthusiasts can find inspiration, discover the latest trends, and connect with others who share their passion for stylish and functional living spaces. </p>
 
 ### User Stories
 
 #### Authentication
+
  * **Sign Up:**
    As a user, I want to create a new account, so that I can access features and content that are available exclusively to registered users.
+
  * **Sign In:**
    As a user, I want to sign in to the app, so that I can access all the functionality meant for logged-in users.
+
  * **Sign Out:**
    As a user, I want my session to remain active without needing to constantly log back in, so that my user experience remains smooth and uninterrupted until I choose to log out.
+
  * **Refreshing access tokens:**
    As a user I can maintain my logged in status for 24 hours so that I can easily interact with the app throughout the day.
+
  * **Visibility of Authentication Options:**
    As a logged-out user, I want to see sign-in and sign-up options, so that I can easily register or log in when needed.
+
  * **Profile Management:**
    As a user, I want to update my username and password, so that I can maintain the security of my account and change my display name if needed.
+ 
  * **Profile Editing:**
    As a user, I want to edit my profile information (such as bio, profile picture, etc.), so that I can keep my profile up-to-date and accurately represent myself.
    
 #### Navigation and Browsing
+
 - **Smooth Navigation:**  
   As a user, I want to navigate through pages quickly without any delay, so that I can view content seamlessly without experiencing page reloads.
 
@@ -85,6 +106,7 @@ Check out the live version of the project.
   As a user, I want to view the most recent posts, so that I can stay updated with the latest content shared by other users.
 
 ### Content Creation and Interaction
+
 - **Create Posts:**  
   As a user, I want to create and publish new posts, so that I can share content and engage with other users on the platform.
 
@@ -109,6 +131,7 @@ Check out the live version of the project.
   - As a user, I want to see the date and time when a comment was posted, so that I can understand the context and relevance of the comment based on when it was made.
 
 ### Profile and User Interaction
+
 - **Profile Pages:**  
   As a user, I want to access my profile page, so that I can view and manage my personal information, posts, and activity on the platform.
 
@@ -125,6 +148,7 @@ Check out the live version of the project.
   As a user, I want to view a list of the most followed profiles, so that I can discover popular users and follow them for interesting content.
 
 ### Content Discovery and Search
+
 - **Search for Posts:**  
   As a user, I want to search for specific posts, so that I can quickly find content that matches my interests or needs.
 
@@ -141,6 +165,7 @@ Check out the live version of the project.
   As a user, I want to access a dedicated page for each post, so that I can view the full content, comments, and related interactions in one place.
 
 ### User Session Management
+
 - **Session Visibility:**  
   As a user, I want to be able to see if I am logged in, so that I know whether I need to sign in to access certain features.
 
@@ -148,10 +173,15 @@ Check out the live version of the project.
   As a user, I want my session to remain active without needing to constantly log back in, so that my user experience remains smooth and uninterrupted until I choose to log out.
 
 ### Real Time Notifications
+
  - **Authentication Notificatios**
     - As a user, I want to receive a notification after signing up, sign-in and sign out, so that I know my account creation was successful.
+
  - **Post Create, Edit, and Delete Notifications**
     - As a user, I want to receive notifications when I create, edit, or delete a post, so that I am informed of the success or failure of these actions.
+
+ - **Comment Create, Edit, and Delete Notifications**
+    - As a user, I want to receive notifications when I create, edit, or delete a comment, so that I am informed of the success or failure of these actions.
 
 [View Full User Story here](https://github.com/users/fh255/projects/10/views/1)
   
@@ -161,21 +191,21 @@ Check out the live version of the project.
 
 ### Images
 
-The images used for the profile avatars graphic was sourced from the Code Institute Moments walkthrough.
-
-Additional images, including those used for user profiles and posts, were sourced from [Google Images](https://images.google.com/).
-
-The favicons were custom-created using [Favicon.io](https://favicon.io/).
+ - The images used for the profile avatars graphic was sourced from the Code Institute Moments walkthrough.
+ - Additional images, including those used for user profiles and posts, were sourced from [Google Images](https://images.google.com/).
+ - The favicons were custom-created using [Favicon.io](https://favicon.io/).
 
 ### Typography
 
 The Home Decor website uses a combination of clean, modern, and widely supported fonts to ensure a consistent and aesthetically pleasing experience across different devices and platforms.
 
 #### Primary Font
+
 - **Font Family:** `"DM Sans", sans-serif;`
 - **Usage:** This font is primarily used for headings, body text, and other key content throughout the site. "DM Sans" is a modern and elegant font that enhances readability while maintaining a stylish and minimalistic appearance.
 
 #### Fallback Font Stack
+
 - **Font Family:**
   ```css
   -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
@@ -209,6 +239,7 @@ The Home Decor website features a clean and modern color palette designed for si
 ## Features
 
 ### Logo
+
 The logo was utilized both as the webpage's favicon and as the home link in the navigation bar.
 <details>
   <summary>Logo</summary>
@@ -216,6 +247,7 @@ The logo was utilized both as the webpage's favicon and as the home link in the 
 </details>
 
 ### NavBar
+
 The user is Sign in.
 <details>
   <summary>Signed In NavBar</summary>
@@ -229,6 +261,7 @@ The user is not Signed in
 </details>
 
 ### Home Page
+
 The landing page features a sidebar highlighting the "Most Viral Profiles."
 <details>
   <summary>Signed In Home page</summary></summary>
@@ -241,7 +274,9 @@ The landing page features a sidebar highlighting the "Most Viral Profiles."
 </details>
 
 ### Post Page
+
 #### Single Post Page (When the User is Logged In)
+
 When a user clicks on a single post, they are directed to the post's dedicated page, which still includes the "Most Viral Profiles" sidebar. Below the post, two icons represent available actions:
 
  - Heart Icon: Allows users to react to the post. Once clicked, the icon fills with a solid shade, indicating the reaction. Clicking it again will undo the reaction. The number next to the heart reflects the total number of reactions from users.
@@ -271,6 +306,7 @@ Beneath the post, the comment section lists all user comments. Logged-in users c
 </details>
 
 #### Single Post Page (When the User is Logged In and is the Owner of the Post)
+
 If a user is the owner of the post, three vertical dots are displayed next to the post image. When clicked, this menu gives the user the option to edit or delete their post.
 
 <details>
@@ -284,6 +320,7 @@ If a user is the owner of the post, three vertical dots are displayed next to th
 </details>
 
 #### Single Post Page (When the User is Not Logged In)
+
  - When a logged-out user hovers over the heart icon, an overlay message appears prompting them to log in to react to the post.
  - Logged-out users are unable to leave comments or mention other users.
 
@@ -293,6 +330,7 @@ If a user is the owner of the post, three vertical dots are displayed next to th
 </details>
 
 ### About Us
+
 Here, you'll find simple ideas and tips to decorate your home and make it your own. Whether it's furniture, accessories, or small touches, this page helps you create a cozy and stylish space.
 The icon and link to this page will only show in the NavBar for users who are logged out.
 
@@ -302,6 +340,7 @@ The icon and link to this page will only show in the NavBar for users who are lo
 </details>
 
 ### Add Post
+
 This is where logged-in users can upload an image for their post and fill out the Title and Content sections. After completing these, they can click the "Create" button to publish their post.
 Once the post is created, the owner has the option to edit or delete it.
 
@@ -311,6 +350,7 @@ Once the post is created, the owner has the option to edit or delete it.
 </details>
 
 ### Feed
+
 The Feed displays posts created by users you follow. If a logged-in user isn't following anyone, a "No results found" message is shown, encouraging them to start following other users.
 
 <details>
@@ -324,6 +364,7 @@ The Feed displays posts created by users you follow. If a logged-in user isn't f
 </details>
 
 ### Profile Page
+
 The profile page displays the profile owner's avatar or image, along with stats showing the number of posts posted, the number of profiles followed, and the number of followers. There is a bio section, followed by all the posts the profile owner has posted.
 On the left-hand side, there is a section showing the most viral profiles. If the user is logged in, a "Follow/Unfollow" button appears at the top of the profile section.
 If the logged-in user is also the owner of the profile, a three-bar icon is visible in the top right corner. Clicking this icon allows the profile owner to edit their profile, change their profile image, or update their username.
@@ -344,6 +385,7 @@ If the logged-in user is also the owner of the profile, a three-bar icon is visi
 </details>
 
 ### Sign In
+
 Sign in page with a link to sign up for an account if the user does not have an account yet.
 
 <details>
@@ -352,6 +394,7 @@ Sign in page with a link to sign up for an account if the user does not have an 
 </details>
 
 ### Sign Up
+
 Sign up page with a link to sign in if the user already has an account.
 
 <details>
@@ -360,6 +403,7 @@ Sign up page with a link to sign in if the user already has an account.
 </details>
 
 ### Custom 404 page
+
 The 404 page lets users know they are still connected to the site but on a non-existent page.
 
 <details>
@@ -368,6 +412,7 @@ The 404 page lets users know they are still connected to the site but on a non-e
 </details>
 
 ### Real Time Notifications
+
 Users are kept up to date in real-time with pop-up messages appearing in the top-right corner of the screen. These notifications inform users of successful updates to their content or prompt them when action is required, ensuring a smooth and interactive experience.
 
 <details>
@@ -401,18 +446,22 @@ Users are kept up to date in real-time with pop-up messages appearing in the top
 </details>
 
 <details>
-  <summary>Post Created Notification</summary>
+  <summary>Comment Created Notification</summary>
+    <img width="302" alt="cmnt crt" src="https://github.com/user-attachments/assets/d0910370-e47a-4218-b517-f04b1e9a4974">
 </details>
 
 <details>
-  <summary>Post Edited Notification</summary>
+  <summary>Comment Edited Notification</summary>
+    <img width="302" alt="cmnt edit" src="https://github.com/user-attachments/assets/0c491313-2a14-4ecb-812a-4688f47270e3">
 </details>
 
 <details>
-  <summary>Post Deleted Notification</summary>
+  <summary>Comment Deleted Notification</summary>
+    <img width="311" alt="cmnt dlt" src="https://github.com/user-attachments/assets/0ffc8c1b-3484-4136-8bcf-2bf8e769787c">
 </details>
 
 ### CRUD
+
 The CRUD functionalities implemented in this project are the following:
  - After signing up, users can personalize their profile by adding a profile picture and bio, and they can also update their username and password on the profile page.
  - For posts, users can edit or delete their memes. Clicking the three dots on the right of a post allows for deletion (which returns the user to the home page) or editing, which opens an edit form.
@@ -485,15 +534,18 @@ The following components have been implemented and reused throughout the project
 ## Technologies
 
 ### Languages Used
+
 - [Python](https://www.python.org/)
 - [HTML](https://www.w3schools.com/html/html_intro.asp)
 - [CSS](https://www.w3schools.com/css/default.asp)
 - [JavaScript](https://react.dev/)
 
 ### Databases
+
 - **[PostgreSQL](https://www.postgresql.org/):** Used for managing and storing relational data.
 
 ### Cloud Storage and Deployment Services
+
 - **[Cloudinary](https://www.postgresql.org/):** Used to store media files and images.
 - **[Heroku](https://dashboard.heroku.com/apps):** Used for the final deployment and hosting of the application.
 - **[ElephantSQL](https://elephantsql.com/):** Used to host and operate the PostgreSQL database.
@@ -503,6 +555,7 @@ The following components have been implemented and reused throughout the project
 ## Frameworks and Libraries
 
 ### API Backend
+
 - [Django Rest Framework](https://www.django-rest-framework.org/)
 - [Psycopg2](https://pypi.org/project/psycopg2/)
 - [django_filters](https://django-filter.readthedocs.io/en/stable/guide/install.html)
@@ -516,6 +569,7 @@ The following components have been implemented and reused throughout the project
 [Back to top](#home-Decor)
 
 ### Frontend
+
 - [React JS](https://react.dev/)
 - [JSON Web Tokens](https://jwt.io/)
 - [React Bootstrap](https://react-bootstrap-v4.netlify.app/)
@@ -527,6 +581,7 @@ The following components have been implemented and reused throughout the project
 [Back to top](#home-Decor)
 
 ### Installed Libraries, and Components
+
 - **[Axios](https://axios-http.com/):** A promise-based HTTP client for JavaScript. It is used for making HTTP requests from the browser and handling the transformation of request and response data.
 - **[react-router-dom](https://www.npmjs.com/package/react-router-dom):** Enables dynamic routing in a web app.
 - **[Google Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/):** An open-source tool for running technical website audits.
@@ -541,13 +596,191 @@ The following components have been implemented and reused throughout the project
 
 ## Testing
 
+### Introduction
+
+This project has been continuously tested throughout the development stages using the following features:
+ - Python terminal for backend functionalities
+ - Google Developer Tools
+ - Manual Testing
+
+### Validator Testing
+
+#### HTML Validator
+
+All HTML files have successfully passed the HTML validation check with zero errors.
+
+<details>
+  <summary>HTML Validator</summary>
+    <img width="699" alt="HTML" src="https://github.com/user-attachments/assets/7154a41e-02f5-4b7e-a986-6cf99a29d0d4">
+</details>
+
+#### CSS Validator
+
+All CSS files have successfully passed the HTML validation check with zero errors.
+
+<details>
+  <summary>CSS Validator</summary>
+    <img width="1218" alt="CSS" src="https://github.com/user-attachments/assets/57df510a-6789-4ca4-95ed-042e1ae827ef">
+</details>
+
+#### JSX Validation
+
+Most of the validation was done using the Gitpod Code Institute IDE's "Problems" tab, along with the Prettier code formatting extension. This ensured that the code was properly formatted, free of errors, and followed best practices throughout the project.
+
+<details>
+  <summary>Successfully Compiled Massage</summary>
+    <img width="382" alt="compiled" src="https://github.com/user-attachments/assets/6b2862ec-23b5-4633-a210-112d759ca910">
+</details>
+
+### Lighthouse testing
+
+<details>
+  <summary>Successfully Compiled Massage</summary>
+    <img width="579" alt="Lighthouse" src="https://github.com/user-attachments/assets/76e3f526-b066-4da4-ba81-2914f7be6809">
+</details>
+
 [Back to top](#home-Decor)
 
 ## Deployment
 
+### Initial Deployment
+
+To deploy the app for the first time on Heroku:
+
+- Navigate to [Heroku](https://dashboard.heroku.com/apps).
+- Click the **New** dropdown and select **Create new app**.
+- Provide a name for your app and choose the appropriate region (e.g., Europe).
+- Click **Create app**.
+- Under the **Deploy** tab, select **GitHub** as the deployment method.
+- Connect your app to the **HomeDecor** GitHub repository.
+- Once connected, click **Deploy Branch** and open the app in your browser to ensure it is working properly.
+
+### Deployment Steps
+
+ - Setup React in Code Institute Gitpod workspace.
+ - Run the following commands to create a React app and start the development server:
+``` bash
+npx create-react-app .
+--use-npm
+npm start
+```
+ - install the following dependencies to set up the app:
+``` bash
+react-bootstrap@1.6.1
+bootstrap@5.3.3"
+react-router-dom@5.3.0
+axios
+react-infinite-scroll-component
+msw --save-dev
+jwt-decode
+eslint -g
+```
+ - After making changes to the project, run the following commands to commit and push the code to GitHub:
+``` bash
+git add .
+git commit
+git push
+```
+ - Navigate to Heroku.
+ - Click **New** and select **Create new app**.
+ - Provide a name for the app and select the region (e.g., Europe).
+ - Click **Create app**.
+ - Under the **Deploy tab**, select **GitHub** as the deployment method.
+ - Search for and connect the app to your HomeDecor GitHub repository.
+ - Once connected to the correct repository, click **Deploy Branch** to trigger the deployment.
+ - Open the app in your browser to confirm everything is working as expected.
+
+[Back to top](#home-Decor)
+
+### Final Deployment
+
+To prepare and deploy the final version of the app, follow these steps:
+ - Remove the `React.StrictMode` component from `index.js`.
+ - Instead of importing the entire Bootstrap library, import only the components you need to minimize the bundle size. For example:
+``` bash
+import Navbar from "react-bootstrap/Navbar"
+import Container from "react-bootstrap/Container"
+import Nav from "react-bootstrap/Nav"
+```
+ - Clean up any `console.log` statements from the code.
+ - Following the instructions from the Moments walkthrough, leave the `console.log` statements commented out inside `catch` blocks to assist with debugging in the future.
+ - In `package.json`, add the Heroku deployment command under the `"scripts"` section:
+``` bash
+"heroku-prebuild": "npm install -g serve"
+```
+ - In the root of the project, create a `Procfile` with the following content:
+``` bash
+web: serve -s build
+```
+ - After making all necessary changes, commit and push the final version to GitHub:
+``` bash
+git add .
+git commit
+git push
+``` 
+ - Go to your app on the `Heroku dashboard`, navigate to the `Deploy` tab, and scroll down to click the `Deploy Branch` button.
+ - Ensure the build is successful, and then open the app to verify it is functioning as expected.
+ - Test all features in the final deployed version of the app to ensure everything works as it should.
+
+### Cloning the Repository
+
+To clone this repository and run the project locally, follow these steps:
+
+#### Clone the Repository:
+
+ - Navigate to the GitHub repository you want to clone.
+ - Click on the **Code** dropdown button.
+ - Select **HTTPS** and copy the repository URL.
+ - In your terminal or IDE (ensure `git` is installed), run the following command :
+``` bash
+git clone copied-git-url
+```
+ - This will clone the project onto your local machine.
+
+#### Install Dependencies:
+
+ - Navigate into the project folder and run:
+``` bash
+npm install
+```
+#### Run the Application:
+
+ - After the dependencies are installed, start the application using:
+``` bash
+npm start
+```
+
+### Forking the Repository
+
+To fork this repository and create your own copy, follow these steps:
+ - Go to the GitHub repository that you want to fork.
+ - On the top right of the repository page, under the header, click the Fork button.
+ - This will create a copy of the entire project in your GitHub account. You will now have a personal version of the repository where you can make changes independently.
+
 [Back to top](#home-Decor)
 
 ## Credits
+
+### Code Institute
+
+This project is largely based on the Code Institute's **Moments** walkthrough project. Several styles and logic implementations from the original project were adapted and customized to suit the needs of the **Home Decor** project.
+
+### Sources
+
+Throughout the development of this project, the following resources were used to find solutions and gather knowledge:
+
+ - Stack Overflow: For debugging and solutions to common coding issues.
+ - Slack: For seeking advice and troubleshooting bugs.
+ - W3Schools: For reference and examples of HTML, CSS, and JavaScript syntax.
+
+### Media
+
+Most of the images used to populate the content of this website were sourced from Unsplash and Google Images. 
+
+### Acknowledgements
+
+ - My mentor at Code Institute - **Martina Terlevic**, for providing guidance and support throughout the project.
+ - A big thank you to **Roman from Tutor support** for assisting with all the issues related to the my project. 
 
 
 
