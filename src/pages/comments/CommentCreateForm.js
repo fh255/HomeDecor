@@ -3,27 +3,27 @@ import { Link } from "react-router-dom";
 import { MentionsInput, Mention } from "react-mentions";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
-import styles from "../../styles/CommentCreateEditForm.module.css"; // Import the styles
+import styles from "../../styles/CommentCreateEditForm.module.css";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 import { useProfileData } from "../../contexts/ProfileDataContext";
+import { useNotification } from "../../contexts/NotificationContext"; // Import the Notification context
 
 function CommentCreateForm(props) {
   const { post, setPost, setComments, profileImage, profile_id } = props;
   const [content, setContent] = useState("");
+  const { setNotification } = useNotification(); // Get the setNotification function
 
-  // Access popularProfiles from the context
   const { popularProfiles } = useProfileData();
 
-  // Generate the mentions data using only profile IDs and usernames
   const mentionableUsers = useMemo(() => {
     if (!popularProfiles?.results) return [];
     return popularProfiles.results.map((profile) => {
-      const username = profile.owner || ""; // Fallback to an empty string if owner is undefined or null
+      const username = profile.owner || "";
       const id = profile.id || "";
       return {
-        id: String(id), // Ensure the id is always a string
-        display: String(username), // Ensure the display is always a string
+        id: String(id),
+        display: String(username),
       };
     });
   }, [popularProfiles]);
@@ -52,8 +52,9 @@ function CommentCreateForm(props) {
         ],
       }));
       setContent("");
+      setNotification("Comment created successfully."); // Trigger notification
     } catch (err) {
-      // Handle errors (like network issues or server errors)
+      setNotification("Failed to create comment."); // Notify in case of error
     }
   };
 
@@ -74,7 +75,7 @@ function CommentCreateForm(props) {
             >
               <Mention
                 trigger="@"
-                data={mentionableUsers} // Use the fetched users
+                data={mentionableUsers}
                 style={{
                   backgroundColor: "#d1c4e9",
                 }}
@@ -88,7 +89,7 @@ function CommentCreateForm(props) {
         disabled={!content.trim()}
         type="submit"
       >
-        post
+        Post
       </button>
     </Form>
   );

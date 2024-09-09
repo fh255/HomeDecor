@@ -1,14 +1,13 @@
 import React, { useState } from "react";
-
 import Form from "react-bootstrap/Form";
 import { axiosRes } from "../../api/axiosDefaults";
-
 import styles from "../../styles/CommentCreateEditForm.module.css";
+import { useNotification } from "../../contexts/NotificationContext"; // Import the Notification context
 
 function CommentEditForm(props) {
   const { id, content, setShowEditForm, setComments } = props;
-
   const [formContent, setFormContent] = useState(content);
+  const { setNotification } = useNotification(); // Get the setNotification function
 
   const handleChange = (event) => {
     setFormContent(event.target.value);
@@ -33,9 +32,9 @@ function CommentEditForm(props) {
         }),
       }));
       setShowEditForm(false);
+      setNotification("Comment updated successfully."); // Trigger notification
     } catch (err) {
-      // Commented out the console.log that logs errors
-      // console.log(err);
+      setNotification("Failed to update comment."); // Notify in case of error
     }
   };
 
@@ -56,14 +55,14 @@ function CommentEditForm(props) {
           onClick={() => setShowEditForm(false)}
           type="button"
         >
-          cancel
+          Cancel
         </button>
         <button
           className={styles.Button}
           disabled={!formContent.trim()}
           type="submit"
         >
-          save
+          Save
         </button>
       </div>
     </Form>
