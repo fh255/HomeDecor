@@ -1,6 +1,8 @@
 <h1 align="center">Home Decor</h1>
 
-<p>Home Decor is a community-driven platform where users can explore and share ideas for transforming their living spaces. Whether you’re looking to revamp your home interiors, create a cozy garden, or enhance your terrace and balcony, this is your destination for stylish, practical, and affordable decor inspiration.</p>
+<p>Home Decor is a community-driven platform where users can explore and share ideas for transforming their living spaces. Whether you’re looking to revamp your home interiors, create a cozy garden, or enhance your terrace and balcony, this is your destination for stylish, practical, and affordable decor inspiration.
+I chose React.js for the "Home Decor" project because it makes building user interfaces easy and efficient. Its component-based structure allows me to reuse code, which speeds up development. React is also fast, ensuring a smooth experience for users as they browse through decor ideas. Additionally, it’s well-supported with a large community, making it easier to find solutions and resources when needed.
+</p>
 
 <img width="904" alt="mock" src="https://github.com/user-attachments/assets/c88274fd-8a59-4283-a5f7-ebc597939a08">
 
@@ -528,6 +530,8 @@ The following components have been implemented and reused throughout the project
 - **`utils.js`:** Supplies functionality to components that utilize infinite scrolling.
 
 - **`NotFound404.js`:** Displays an error image and message if an invalid URL is accessed. The user is automatically redirected to the Home page after a few seconds.
+
+- **`NotificationContext.js`:** Provides global notification management, allowing components to access and update notifications through the `useNotification` hook within any part of the app.
 
 [Back to top](#home-Decor)
 
