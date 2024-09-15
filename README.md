@@ -49,6 +49,9 @@ Check out the live version of the project.
    - [Introduction](#introduction)
    - [Validator Testing](#validator-testing)
    - [Lighthouse Testing](#lighthouse-testing)
+   - [Manual Testing](#manual-testing)
+   - [User story testing](#user-story-testing) 
+ * [Bugs](#bugs)
  * [Deployment](#deployment)
    - [Initial Deployment](#initial-deployment)
    - [Deployment Steps](#deployment-steps)
@@ -466,8 +469,8 @@ Users are kept up to date in real-time with pop-up messages appearing in the top
 
 The CRUD functionalities implemented in this project are the following:
  - After signing up, users can personalize their profile by adding a profile picture and bio, and they can also update their username and password on the profile page.
- - For posts, users can edit or delete their memes. Clicking the three dots on the right of a post allows for deletion (which returns the user to the home page) or editing, which opens an edit form.
- - Comments on memes can also be edited or deleted. When editing, users can modify the comment and either save or cancel changes.
+ - For posts, users can edit or delete their post. Clicking the three dots on the right of a post allows for deletion (which returns the user to the home page) or editing, which opens an edit form.
+ - Comments on post can also be edited or deleted. When editing, users can modify the comment and either save or cancel changes.
  - Users can react positively to post and undo these actions at any time. They can also follow or unfollow other users whenever they choose.
 
 ### Defensive Design
@@ -509,6 +512,7 @@ When creating a new account, the following error message will appear if any of t
 
 ## Reusable Components
 
+Reusable components in React let us use the same piece of code in different parts of our app, saving time. They help keep our code organized and easy to manage. With reusable components, it's simpler to update our app since changes to one component update it everywhere it's used. They also reduce repetition, making our app more efficient and easier to maintain.
 The following components have been implemented and reused throughout the project:
 
 - **`axiosDefaults.js`:** Handles HTTP requests to the backend API, including CRUD actions and GET requests for specific objects or lists of objects.
@@ -642,6 +646,73 @@ Most of the validation was done using the Gitpod Code Institute IDE's "Problems"
   <summary>Successfully Compiled Massage</summary>
     <img width="579" alt="Lighthouse" src="https://github.com/user-attachments/assets/76e3f526-b066-4da4-ba81-2914f7be6809">
 </details>
+
+### Manual Testing
+
+Manual testing for this project was conducted as follows:
+
+ - Users can view the sign-in, sign-up, and info pages only when they are not logged in. ✅
+ - Users can create a new account successfully. ✅
+ - After creating an account, users can log in and are redirected to the home page. ✅
+ - Users can log out without any issues. ✅
+ - Once logged in, users can create, love, and reply to post, as well as edit, mention and delete their posts and replies. ✅
+ - Users can edit and update their profile, including their profile picture, bio, and separate username and password update options. ✅
+ - All NavLinks and buttons navigate to their correct destinations. ✅
+ - Clicking on a post image takes the user to that post's dedicated page. ✅
+ - Users can save and react to post, and these actions can be undone if needed. ✅
+ - Hovering over the reactions and save icons displays a message indicating the need to sign in, and if clicked while signed out, the user is redirected to the sign-in page. ✅
+ - Each icon has a label notifying the user of its function. On the post page, if the user owns the post, the three dots next to the post image bring up the edit and delete options, with overlay triggers indicating their functions. ✅
+ - The site was continuously developed on Google Chrome and was successfully tested on Firefox and Safari browsers. ✅
+
+### User story testing
+
+**User story:**
+ - User: I want to view a navigation bar on every page, so that I can easily navigate between different sections of the application.  ✅
+ - User: I want to navigate through pages quickly without any delay, so that I can view content seamlessly without experiencing page reloads.  ✅
+ - User: I want to create a new account, so that I can access features and content that are available exclusively to registered users.  ✅
+ - User: I want to sign in to the app, so that I can access all the functionality meant for logged-in users.  ✅
+ - User: I want to be able to see if I am logged in, so that I know whether I need to sign in to access certain features.  ✅
+ - User: I want my session to remain active without needing to constantly log back in, so that my user experience remains smooth and uninterrupted until I choose to log out.  ✅
+ - User: I want to see sign-in and sign-up options, so that I can easily register or log in when needed.  ✅
+ - User: I want to see user avatars displayed next to user profiles, so that I can easily identify and interact with other users of the application.  ✅
+ - User: I want to create and publish new posts, so that I can share content and engage with other users on the platform.  ✅
+ - User: I want to view a detailed post, so that I can read its content, see related comments, and interact with it.  ✅
+ - User: I want to like a post, so that I can express my appreciation or agreement with the content and show support for the author.  ✅
+ - User: I want to view the most recent posts, so that I can stay updated with the latest content shared by other users.  ✅
+ - User: I want to search for specific posts, so that I can quickly find content that matches my interests or needs.  ✅
+ - User: I want to view a list of posts I have liked, so that I can easily revisit and engage with content I previously found interesting or valuable.  ✅
+ - User: I want to view posts from users I follow, so that I can easily keep up with content shared by the people I am interested in.  ✅
+ - User: I want the posts to load automatically as I scroll down the page, so that I can continuously browse content without needing to click on a "Load More" button or navigate between pages.  ✅
+ - User: I want to access a dedicated page for each post, so that I can view the full content, comments, and related interactions in one place.  ✅
+ - User: I want to edit my existing posts, so that I can update or correct the content after it has been published.  ✅
+ - User: I want to create and submit a comment on a post, so that I can share my thoughts, provide feedback, or engage in discussions related to the content.  ✅
+ - User: I want to see the date and time when a comment was posted, so that I can understand the context and relevance of the comment based on when it was made.   ✅
+ - User: I want to edit my comments after they are posted, so that I can correct mistakes or update the information if needed.  ✅
+ - User: I want to delete my comments, so that I can remove content that is no longer relevant or that I no longer wish to display.  ✅
+ - User: I want to view all comments on a post, so that I can read other users’ perspectives and engage in discussions related to the content.  ✅
+ - User: I want to access my profile page, so that I can view and manage my personal information, posts, and activity on the platform.  ✅
+ - User: I want to view user statistics on my profile (such as the number of followers, following, and posts), so that I can track my engagement and growth on the platform.  ✅
+ - User: I want to view a list of the most followed profiles, so that I can discover popular users and follow them for interesting content.  ✅
+ - User: I want to update my username and password, so that I can maintain the security of my account and change my display name if needed.v
+ - User: I want to edit my profile information (such as bio, profile picture, etc.), so that I can keep my profile up-to-date and accurately represent myself.  ✅
+ - User: I want to follow or unfollow other users, so that I can control whose content appears in my feed based on my interests.  ✅
+ - User: I want to view all posts made by a specific user, so that I can explore their content and engage with posts that interest me.  ✅
+ - User: I want to upload and display a profile picture, so that I can personalize my profile and make it easily recognizable to others.  ✅
+ - User: I want to mention other users in a comment (using @username), so that I can notify them and involve them directly in the conversation.  ✅
+ - User: I can maintain my logged in status for 24 hours, so that I can easily interact with the app throughout the day.  ✅
+ - User: I want to receive a notification after I sign in, so that I know whether my sign-in attempt was successful or not.  ✅
+ - User: I want to receive a notification when I sign out, so that I know the sign-out process was successful.  ✅
+ - User: I want to receive a notification after signing up, so that I know my account creation was successful.  ✅
+ - User: I want to receive notifications when I create, edit, or delete a post, so that I am informed of the success or failure of these actions.  ✅
+ - User: I want to receive notifications when I create, edit, or delete a comment, so that I am informed of the success or failure of these actions.  ✅
+
+[Back to top](#home-Decor)
+
+## Bugs
+
+- The first deployment attempt failed due to a CORS (Cross-Origin Resource Sharing) error. After revisiting the Code Institute walkthrough and researching the issue on Slack, I was able to configure the CORS settings correctly in the back-end's Settings.py file. I resolved the issue with assistance from Tutor Roman.
+- There are errors in the console on these pages, which were also noted as expected in the Code Institute Moments walkthrough.
+- Not a bug, but worth mentioning that when running Lighthouse reports, the Performance rating for pages with multiple images tends to score lower, particularly on mobile devices.
 
 [Back to top](#home-Decor)
 
