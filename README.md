@@ -713,6 +713,7 @@ Manual testing for this project was conducted as follows:
 - The first deployment attempt failed due to a CORS (Cross-Origin Resource Sharing) error. After revisiting the Code Institute walkthrough and researching the issue on Slack, I was able to configure the CORS settings correctly in the back-end's Settings.py file. I resolved the issue with assistance from Tutor Roman.
 - There are errors in the console on these pages, which were also noted as expected in the Code Institute Moments walkthrough.
 - Not a bug, but worth mentioning that when running Lighthouse reports, the Performance rating for pages with multiple images tends to score lower, particularly on mobile devices.
+- If a user query returns null, it indicates that the user is not signed in and does not have permission to request any user data, resulting in a 401 response. After that, the JWT is sent to the server for authentication, and once the user is authenticated, the user request is retried. This sequence of steps is based on the normal flow of processing requests, including the time it takes, and isn't factored into the project's grading since that's how it's handled in the course.
 
 [Back to top](#home-Decor)
 
